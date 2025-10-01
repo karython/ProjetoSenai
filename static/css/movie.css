@@ -1,0 +1,153 @@
+/* Responsive */
+@media (max-width: 1024px) {
+  .passo-detalhes {
+    width: 280px;
+  }
+
+  .passo:nth-child(odd) .passo-detalhes {
+    left: calc(100% + 100px);
+  }
+
+  .passo:nth-child(even) .passo-detalhes {
+    right: calc(100% + 100px);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 10px;
+    padding: 20px;
+  }
+
+  .trilha-line {
+    left: 40px;
+  }
+
+  .passo {
+    flex-direction: column !important;
+    align-items: flex-start;
+    padding-left: 40px;
+    margin: 40px 0;
+  }
+
+  .passo-content {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 0;
+  }
+
+  .passo-icon {
+    position: absolute;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+  }
+
+  .passo-detalhes {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    margin-top: 15px;
+    margin-left: 40px;
+    width: calc(100% - 40px);
+    transform: translateY(-20px) !important;
+  }
+
+  .passo-detalhes.active {
+    transform: translateY(0) !important;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .main-title {
+    font-size: 22px;
+    flex-direction: column;
+  }
+
+  header {
+    padding: 15px;
+  }
+
+  .transversais {
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .transversais-image {
+    width: 150px;
+    margin: 0 auto;
+  }
+
+  .conclusao {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin: 5px;
+    padding: 15px;
+    border-width: 3px;
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .main-title {
+    font-size: 20px;
+  }
+
+  .passo-label {
+    font-size: 14px;
+  }
+
+  .passo-number {
+    font-size: 28px;
+  }
+
+  .passo-title {
+    font-size: 15px;
+  }
+
+  .passo-description {
+    font-size: 12px;
+  }
+
+  .detalhes-title {
+    font-size: 15px;
+  }
+
+  .detalhes-text {
+    font-size: 13px;
+  }
+
+  .passo-detalhes {
+    width: calc(100% - 40px);
+  }
+
+  .transversais-image {
+    width: 120px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-text {
+    text-align: center;
+  }
+}

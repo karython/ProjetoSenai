@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trilha Modelista Costureira - SENAI</title>
+    <link rel="stylesheet" href="static/css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header>
+        <div class="logo">
+          <img
+            src="/static/img/SENAI_sem_assinatura_cor.png"
+            alt="Logo senai"
+            style="height: 80px"
+          />
+        </div>
+        <p>Do zero à criação de peças incríveis!</p>
+        <p></p>
+        <p class="subtitle">A trilha completa para se tornar</p>
+        <div class="main-title">
+          <img
+            src="/static/img/SENAI_sem_assinatura_cor copy.png"
+            alt="Logo senai"
+            style="height: 250px"
+          />
+        </div>
+      </header>
+
+      <!-- Trilha -->
+      <div class="trilha">
+        <div class="trilha-line"></div>
+
+        <!-- Passo 01 -->
+        <div class="passo">
+          <div class="passo-content">
+            <div class="passo-number">
+              <img src="/static/img/01.png" alt="" />01
+            </div>
+
+            <div class="passo-title">Consciência Emocional (1h)</div>
+            <div class="passo-description">
+              Antes de costurar tecidos, é preciso entender suas emoções. Este
+              curso é o ponto de partida para desenvolver inteligência emocional
+              e foco
+            </div>
+            <div class="passo-detalhes" id="detalhes1">
+              <div class="detalhes-title">Consciência Emocional</div>
+              <div class="detalhes-text">
+                <img src="/static/img/folder Modelista Costureira .png" />
+                SENAI Play é a plataforma digital do SENAI com cursos rápidos,
+                vídeos e podcasts para quem quer aprender de forma prática e
+                moderna.
+              </div>
+            </div>
+          </div>
+          <div class="passo-icon" onclick="toggleDetalhes(1)">🧵</div>
+          <div style="width: 45%"></div>
+        </div>
+
+        <!-- Passo 02 -->
+        <div class="passo">
+          <div class="passo-content">
+            <div class="passo-number">
+              <img src="/static/img/01.png" alt="" />02
+            </div>
+            <div class="passo-title">
+              Curso de Costureira(s) Industrial e Vestuário (200h)
+            </div>
+            <div class="passo-description">Aqui começa a prática!</div>
+            <div class="passo-detalhes" id="detalhes2">
+              <div class="detalhes-title">
+                Costureira(s) Industrial e Vestuário
+              </div>
+              <div class="detalhes-text">
+                <img src="/static/img/image.png" style="height: 8rem;">
+                Aqui começa a prática! Aprenda técnicas industriais de costura e
+                ganhe domínio sobre máquinas e processos produtivos.
+              </div>
+            </div>
+          </div>
+          <div class="passo-icon" onclick="toggleDetalhes(2)">🪡</div>
+          <div style="width: 45%"></div>
+        </div>
+
+        <!-- Passo 03 -->
+        <div class="passo">
+          <div class="passo-content">
+            <div class="passo-number">
+              <img src="/static/img/01.png" alt="" />03
+            </div>
+            <div class="passo-title">Curso de Modelista (200h)</div>
+            <div class="passo-description">
+              Transforme ideias em modelos! 
+            </div>
+            <div class="passo-detalhes" id="detalhes3">
+              <div class="detalhes-title">Curso de Modelista</div>
+              <div class="detalhes-text">
+                <img src="/static/img/pass3.png" style="height: 5rem;">
+                Este curso é essencial para quem
+                quer criar peças com precisão e criatividade. Você aprenderá a
+                fazer moldes, interpretar medidas e desenvolver modelagens que
+                servem de base para qualquer peça de vestuário.
+              </div>
+            </div>
+          </div>
+          <div class="passo-icon" onclick="toggleDetalhes(3)">👗</div>
+          <div style="width: 45%"></div>
+        </div>
+
+        <!-- Passo 04 -->
+        <div class="passo">
+          <div class="passo-content">
+            <div class="passo-number">
+              <img src="/static/img/01.png" alt="" />04
+            </div>
+            <div class="passo-title">
+              Curso de Costureira(s) Sob Medida, Corte e Costura (260h)
+            </div>
+            <div class="passo-description">
+              O toque humanizado no modelo. Aprenda a adaptar moldes e costurar
+              peças únicas.
+            </div>
+            <div class="passo-detalhes" id="detalhes4">
+              <div class="detalhes-title">
+                Costureira(s) Sob Medida, Corte e Costura
+              </div>
+              <div class="detalhes-text">
+                <img src="/static/img/pass4.png" style="height: 5rem;">
+                Aprenda a adaptar moldes e
+                costurar peças únicas. Este curso foca em alta costura, ajustes
+                personalizados e técnicas refinadas para criar roupas exclusivas
+                que valorizam o corpo de cada cliente.
+              </div>
+            </div>
+          </div>
+          <div class="passo-icon" onclick="toggleDetalhes(4)">👔</div>
+          <div style="width: 45%"></div>
+        </div>
+
+        <!-- Passo 05 -->
+        <div class="passo">
+          <div class="passo-content">
+            <div class="passo-number">
+              <img src="/static/img/01.png" alt="" />05
+            </div>
+            <div class="passo-title">Curso de Camisaria (60h)</div>
+            <div class="passo-description">
+              Detalhes que fazem a diferença! Domine a confecção de camisas com
+              acabamento profissional.
+            </div>
+            <div class="passo-detalhes" id="detalhes5">
+              <div class="detalhes-title">Curso de Camisaria</div>
+              <div class="detalhes-text">
+                <img src="/static/img/pass5.png" style="height: 5rem;">
+                Detalhes que fazem a diferença! Domine a confecção de camisas
+                com acabamento profissional. Aprenda sobre colarinhos, punhos,
+                casas de botão e todos os detalhes técnicos que transformam uma
+                camisa simples em uma peça impecável.
+              </div>
+            </div>
+          </div>
+          <div class="passo-icon" onclick="toggleDetalhes(5)">👕</div>
+          <div style="width: 45%"></div>
+        </div>
+
+        <!-- Passo 06 -->
+        <div class="passo">
+          <div class="passo-content">
+            <div class="passo-number">
+              <img src="/static/img/01.png" alt="" />06
+            </div>
+            <div class="passo-title">
+              Curso de Gerador de computador IA para escritórios modernos (230h)
+            </div>
+            <div class="passo-description">
+              Domine ferramentas digitais e inteligência artificial para
+              trabalhar com eficiência.
+            </div>
+            <div class="passo-detalhes" id="detalhes6">
+              <div class="detalhes-title">
+                Gerador de computador IA para escritórios modernos
+              </div>
+              <div class="detalhes-text">
+                Domine ferramentas digitais e inteligência artificial para
+                trabalhar com eficiência. Neste curso você aprenderá a usar
+                softwares de modelagem digital, automatizar processos e aplicar
+                tecnologia de ponta no universo da moda.
+              </div>
+            </div>
+          </div>
+          <div class="passo-icon" onclick="toggleDetalhes(6)">💻</div>
+          <div style="width: 45%"></div>
+        </div>
+      </div>
+
+      <!-- Conclusão -->
+      <div class="conclusao">
+        <img src="/static/img/capelo.png" style="height: 8rem" />
+        <br />
+        <br />
+        <div class="titulo-premio">
+          <span class="trophy">🏆</span>
+          <h2>Modelista Costureira</h2>
+          <span class="trophy">🏆</span>
+        </div>
+
+        <h4>Agora você domina a técnica, a estética e a visão!</h4>
+        <h4>
+          Os próximos cursos vão te preparar para construir um negócio promissor
+          e sustentável na moda.
+        </h4>
+        <br />
+        <br />
+        <h3>Cursos Transversais</h3>
+        <img src="/static/img/transversal.png" style="height: auto" />
+      </div>
+
+      <!-- Cursos Transversais -->
+
+      <!-- Footer -->
+      <footer>
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img
+              src="/static/img/_cortado.png"
+              alt="logo senai"
+              style="height: 40px"
+            />
+          </div>
+          <p class="footer-text">
+            acompanha cada passo da sua jornada, com soluções para transformar
+            uma ideia em negócio – e um negócio em sucesso.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.play.senai.br" target="_blank"
+            >www.play.senai.br</a
+          >
+          <a href="https://www.sistemafibra.org.br" target="_blank"
+            >www.sistemafibra.org.br</a
+          >
+        </div>
+      </footer>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+  </body>
+</html>

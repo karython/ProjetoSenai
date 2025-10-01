@@ -1,0 +1,365 @@
+@import url('/static/css/movie.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 40px;
+  border: 4px solid #e8491d;
+  border-radius: 15px;
+  background: #fff;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  color: #1801ac;
+  margin-bottom: 10px;
+}
+
+.logo span {
+  color: #e8491d;
+}
+
+h1 {
+  font-size: 24px;
+  color: #1801ac;
+  margin: 15px 0 5px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+p {
+  font-size: 25px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.main-title {
+  font-size: 28px;
+  color: #1801ac;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Trilha */
+.trilha {
+  position: relative;
+  padding: 40px 0;
+}
+
+.trilha-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #e8491d,
+    #e8491d 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.passo {
+  position: relative;
+  margin: 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.passo:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.passo-content {
+  width: 45%;
+  padding: 20px;
+  position: relative;
+}
+
+.passo-label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #e8491d;
+  margin-bottom: 5px;
+}
+
+.passo-number {
+  font-size: 38px;
+  font-weight: bold;
+  color: #1801ac;
+}
+
+.passo-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1801ac;
+  margin: 10px 0;
+}
+
+.passo-description {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.passo-icon {
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  border: 3px solid #1801ac;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.passo-icon:hover {
+  transform: scale(1.1);
+  background: #1801ac;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Detalhes expandidos */
+.passo-detalhes {
+  position: absolute;
+  width: 320px;
+  overflow: hidden;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  opacity: 0;
+  visibility: hidden;
+  background: linear-gradient(135deg, #f0f7ff, #fff);
+  border-radius: 8px;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  pointer-events: none;
+}
+
+/* Passos à esquerda (ímpares) - detalhes aparecem à direita */
+.passo:nth-child(odd) .passo-detalhes {
+  left: calc(100% + 110px);
+  transform: translateX(-30px);
+}
+
+/* Passos à direita (pares) - detalhes aparecem à esquerda */
+.passo:nth-child(even) .passo-detalhes {
+  right: calc(100% + 110px);
+  transform: translateX(30px);
+}
+
+.passo-detalhes.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.passo:nth-child(even) .passo-detalhes.active {
+  transform: translateX(0);
+}
+
+.passo:nth-child(odd) .passo-detalhes.active {
+  transform: translateX(0);
+}
+
+.detalhes-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1801ac;
+  margin-bottom: 12px;
+}
+
+.detalhes-text {
+  color: #555;
+  line-height: 1.7;
+  font-size: 14px;
+}
+/* Mantém seu estilo original */
+.conclusao {
+  text-align: center;
+  margin: 60px 0 40px;
+  padding: 30px;
+  background: linear-gradient(135deg, #f5f5f5, #fff);
+  border-radius: 15px;
+}
+
+/* Troféu */
+.trophy {
+  font-size: 32px;
+  margin: 0 10px;
+}
+
+/* Alinhamento do título com os troféus */
+.titulo-premio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* espaço entre troféu e texto */
+}
+
+.conclusao h2 {
+  color: #1801ac;
+  font-size: 24px;
+  margin: 0; /* remove espaço extra */
+}
+
+.conclusao p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Cursos Transversais */
+.transversais {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 40px 0;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.transversais-image {
+  flex-shrink: 0;
+  width: 200px;
+}
+
+.transversais-image img {
+  width: 100%;
+  height: auto;
+}
+
+.transversais-content {
+  flex: 1;
+}
+
+.transversais h3 {
+  color: #1801ac;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.transversal-item {
+  display: flex;
+  align-items: start;
+  margin: 15px 0;
+  gap: 15px;
+}
+
+.transversal-number {
+  background: #e8491d;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.transversal-text {
+  color: #333;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #000000;
+  margin-top: 40px;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo img {
+  height: 50px;
+}
+
+.footer-text {
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: left;
+  max-width: 500px;
+  margin-top: 40px;
+}
+
+.footer-links {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.footer-links a {
+  color: #240988;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #e8491d;
+}
