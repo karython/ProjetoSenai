@@ -1,156 +1,34 @@
-/* Tablets e telas médias */
+/* Responsive - Tablets */
 @media (max-width: 1024px) {
   .passo-detalhes {
     width: 280px;
   }
-  
+
   .passo:nth-child(odd) .passo-detalhes {
     left: calc(100% + 100px);
   }
-  
+
   .passo:nth-child(even) .passo-detalhes {
     right: calc(100% + 100px);
   }
 }
 
-/* Tablets e smartphones em modo paisagem */
+/* Responsive - Mobile */
 @media (max-width: 768px) {
   .container {
     margin: 10px;
     padding: 20px;
-  }
-  
-  .trilha {
-    padding: 20px 0;
-    padding-right: 10px;
-  }
-  
-  .trilha-line {
-    right: 40px;
-    left: auto;
-    transform: none;
-  }
-  
-  .passo {
-    flex-direction: row !important;
-    align-items: flex-start;
-    justify-content: flex-end;
-    padding-right: 0;
-    margin: 35px 0;
-    gap: 0;
-    position: relative;
-  }
-  
-  .passo-icon {
-    position: absolute;
-    right: 10px;
-    left: auto;
-    top: 0;
-    flex-shrink: 0;
-    width: 60px;
-    height: 60px;
-    font-size: 28px;
-    margin: 0;
-  }
-  
-  .passo-content {
-    width: 100%;
-    padding: 0;
-    padding-right: 85px;
-    padding-left: 10px;
-    text-align: left;
-  }
-  
-  .passo-detalhes {
-    position: static !important;
-    left: auto !important;
-    right: auto !important;
-    margin-top: 15px;
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
-    transform: translateY(-10px) !important;
-  }
-  
-  .passo-detalhes.active {
-    transform: translateY(0) !important;
-  }
-  
-  h1 {
-    font-size: 20px;
-  }
-  
-  .main-title {
-    font-size: 22px;
-    flex-direction: column;
-  }
-  
-  header {
-    padding: 15px;
-  }
-  
-  .transversais {
-    padding: 20px;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .transversais-image {
-    width: 150px;
-    margin: 0 auto;
-  }
-  
-  .conclusao {
-    padding: 20px;
-  }
-
-  .conclusao img {
-    height: 6rem !important;
-  }
-
-  .trophy {
-    font-size: 24px;
-  }
-
-  .titulo-premio h2 {
-    font-size: 20px;
-  }
-}
-
-/* Smartphones */
-@media (max-width: 480px) {
-  .container {
-    margin: 5px;
-    padding: 15px;
     border-width: 3px;
   }
-  
+
+  /* Header ajustes */
   header {
-    padding: 10px;
+    padding: 15px 5px;
+    margin-bottom: 30px;
   }
 
-  header .logo img {
-    height: 60px !important;
-  }
-
-  .main-title img {
-    height: 180px !important;
-  }
-  
-  .logo {
-    font-size: 24px;
-  }
-  
-  h1 {
-    font-size: 18px;
-  }
-
-  h3 {
-    font-size: 18px;
-  }
-
-  h4 {
-    font-size: 12px;
+  .logo img {
+    height: 60px;
   }
 
   p {
@@ -158,84 +36,246 @@
   }
 
   .subtitle {
-    font-size: 14px;
-  }
-  
-  .main-title {
-    font-size: 20px;
+    font-size: 16px;
   }
 
+  h1 {
+    font-size: 18px;
+  }
+
+  .main-title {
+    font-size: 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main-title img {
+    height: 180px;
+  }
+
+  /* Trilha mobile */
   .trilha {
-    padding-right: 5px;
-    padding-left: 0;
+    padding: 10px 0;
   }
 
   .trilha-line {
-    right: 30px;
-    left: auto;
+    left: 30px;
   }
 
   .passo {
+    flex-direction: column !important;
+    align-items: flex-start;
+    padding-left: 0;
+    margin: 20px 0;
+    position: relative;
+  }
+
+  .passo.expanded {
     margin: 30px 0;
   }
 
+  .passo-content {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 10px;
+  }
+
   .passo-icon {
-    right: 5px;
-    left: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+  }
+
+  .passo-number {
+    font-size: 24px;
+  }
+
+  .passo-number img {
+    height: 30px;
+  }
+
+  .passo-title {
+    font-size: 14px;
+    margin: 8px 0;
+  }
+
+  .passo-description {
+    font-size: 12px;
+  }
+
+  /* Detalhes em mobile */
+  .passo-detalhes {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    margin-top: 0;
+    margin-left: 0;
+    width: 100%;
+    transform: translateY(-20px) !important;
+    max-height: 0;
+    padding: 0 15px;
+    transition: opacity 0.4s ease, transform 0.4s ease, max-height 0.4s ease;
+  }
+
+  .passo-detalhes.active {
+    transform: translateY(0) !important;
+    margin-top: 15px;
+    max-height: 1000px;
+    padding: 15px;
+  }
+
+  .detalhes-title {
+    font-size: 14px;
+  }
+
+  .detalhes-text {
+    font-size: 13px;
+  }
+
+  /* Conclusão mobile */
+  .conclusao {
+    padding: 20px 15px;
+    margin: 40px 0 20px;
+  }
+
+  .conclusao img:first-child {
+    height: 60px !important;
+  }
+
+  .titulo-premio {
+    gap: 10px;
+  }
+
+  .trophy {
+    font-size: 24px;
+  }
+
+  .conclusao h2 {
+    font-size: 20px;
+  }
+
+  .conclusao h3 {
+    font-size: 18px;
+    margin: 20px 0 15px;
+  }
+
+  .conclusao h4 {
+    font-size: 13px;
+  }
+
+  /* Footer mobile */
+  footer {
+    padding: 20px 10px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-text {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-links a {
+    margin: 0;
+  }
+}
+
+/* Responsive - Mobile pequeno */
+@media (max-width: 480px) {
+  .container {
+    margin: 5px;
+    padding: 15px;
+    border-width: 2px;
+  }
+
+  header {
+    padding: 10px 5px;
+    margin-bottom: 20px;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .main-title img {
+    height: 150px;
+  }
+
+  .trilha-line {
+    left: 25px;
+  }
+
+  .passo {
+    margin: 15px 0;
+    transition: margin 0.4s ease;
+  }
+
+  .passo.expanded {
+    margin: 25px 0;
+    z-index: 5;
+  }
+
+  .passo-content {
+    padding-left: 60px;
+  }
+
+  .passo-icon {
     width: 50px;
     height: 50px;
     font-size: 24px;
   }
 
-  .passo-content {
-    padding-right: 70px;
-    padding-left: 5px;
-  }
-  
-  .passo-label {
-    font-size: 14px;
-  }
-  
   .passo-number {
-    font-size: 26px;
+    font-size: 20px;
   }
 
   .passo-number img {
-    height: 28px !important;
+    height: 25px;
   }
-  
+
   .passo-title {
-    font-size: 14px;
+    font-size: 13px;
   }
-  
+
   .passo-description {
-    font-size: 12px;
+    font-size: 11px;
   }
-  
+
   .detalhes-title {
-    font-size: 14px;
+    font-size: 13px;
   }
-  
+
   .detalhes-text {
     font-size: 12px;
   }
 
-  .detalhes-text img {
-    height: auto !important;
-    max-height: 4rem;
-  }
-  
-  .passo-detalhes {
-    width: 100%;
-    padding: 15px;
-  }
-  
-  .transversais-image {
-    width: 120px;
+  .conclusao {
+    padding: 15px 10px;
   }
 
-  .conclusao img {
-    height: 5rem !important;
+  .conclusao img:first-child {
+    height: 50px !important;
   }
 
   .trophy {
@@ -243,110 +283,57 @@
     margin: 0 5px;
   }
 
-  .titulo-premio {
-    gap: 10px;
-  }
-
-  .titulo-premio h2 {
+  .conclusao h2 {
     font-size: 18px;
   }
-  
-  .footer-content {
-    flex-direction: column;
-    gap: 15px;
+
+  .conclusao h3 {
+    font-size: 16px;
+  }
+
+  .conclusao h4 {
+    font-size: 12px;
   }
 
   .footer-logo img {
-    height: 35px !important;
+    height: 35px;
   }
-  
+
   .footer-text {
-    text-align: center;
     font-size: 13px;
-    margin-top: 20px;
   }
 
   .footer-links {
     font-size: 12px;
   }
-
-  .footer-links a {
-    display: block;
-    margin: 10px 0;
-  }
 }
 
-/* Smartphones muito pequenos */
+/* Responsive - Mobile muito pequeno */
 @media (max-width: 360px) {
   .container {
-    margin: 2px;
     padding: 10px;
   }
 
-  header .logo img {
-    height: 50px !important;
+  p {
+    font-size: 14px;
   }
 
   .main-title img {
-    height: 150px !important;
-  }
-
-  p {
-    font-size: 16px;
-  }
-
-  .trilha {
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  .trilha-line {
-    right: 25px;
-    left: auto;
-  }
-
-  .passo {
-    margin: 25px 0;
-  }
-
-  .passo-icon {
-    right: 2px;
-    left: auto;
-    width: 46px;
-    height: 46px;
-    font-size: 22px;
+    height: 120px;
   }
 
   .passo-content {
-    padding-right: 60px;
-    padding-left: 2px;
+    padding-left: 55px;
+    padding-right: 5px;
   }
 
-  .passo-number {
-    font-size: 24px;
+  .passo-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
   }
 
-  .passo-number img {
-    height: 24px !important;
-  }
-
-  .passo-title {
-    font-size: 13px;
-  }
-
-  .passo-description {
-    font-size: 11px;
-  }
-
-  .passo-detalhes {
-    padding: 12px;
-  }
-
-  .detalhes-title {
-    font-size: 13px;
-  }
-
-  .detalhes-text {
-    font-size: 11px;
+  .conclusao h2 {
+    font-size: 16px;
   }
 }
